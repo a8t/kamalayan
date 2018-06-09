@@ -1,0 +1,2 @@
+webpackJsonp([60335399758886],{115:function(t,a){t.exports={data:{site:{siteMetadata:{title:"Kamalayan",description:"A Gatsby.js Starter based on Dimension by HTML5 UP"}}},layoutContext:{}}}});
+//# sourceMappingURL=path----8d6527d402d17d3597d7.js.map
