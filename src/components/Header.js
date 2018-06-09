@@ -1,8 +1,6 @@
 import React from 'react'
 import ka from '../images/ka.svg'
 
-console.log(ka)
-
 const Header = props => (
     <header id="header" style={props.timeout ? { display: 'none' } : {}}>
         <div className="logo">
