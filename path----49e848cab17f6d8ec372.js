@@ -1,0 +1,2 @@
+webpackJsonp([60335399758886],{115:function(t,e){t.exports={data:{site:{siteMetadata:{title:"Kamalayan",description:"A journey into responsible Filipino-ness"}}},layoutContext:{}}}});
+//# sourceMappingURL=path----49e848cab17f6d8ec372.js.map

@@ -1,52 +1,52 @@
 {
   "assetsByChunkName": {
     "path---my-second-post": [
-      "path---my-second-post-07b342e493e5562a5278.js",
-      "path---my-second-post-07b342e493e5562a5278.js.map"
+      "path---my-second-post-443e0386f968b1ac8ee9.js",
+      "path---my-second-post-443e0386f968b1ac8ee9.js.map"
     ],
     "component---src-pages-index-js": [
       "component---src-pages-index-js-23a66785a9b9f5e08795.js",
       "component---src-pages-index-js-23a66785a9b9f5e08795.js.map"
     ],
     "path---": [
-      "path----8d6527d402d17d3597d7.js",
-      "path----8d6527d402d17d3597d7.js.map"
+      "path----49e848cab17f6d8ec372.js",
+      "path----49e848cab17f6d8ec372.js.map"
     ],
     "path---new-page": [
-      "path---new-page-74c8ebbee02274c14eef.js",
-      "path---new-page-74c8ebbee02274c14eef.js.map"
+      "path---new-page-8fb336133b4f96c82299.js",
+      "path---new-page-8fb336133b4f96c82299.js.map"
     ],
     "component---src-templates-blog-post-js": [
       "component---src-templates-blog-post-js-80ad8356218a5175adf7.js",
       "component---src-templates-blog-post-js-80ad8356218a5175adf7.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-bed6904248e4792351cd.js",
-      "component---src-layouts-index-js-bed6904248e4792351cd.js.map"
+      "component---src-layouts-index-js-e1d857d46dca80cc389b.js",
+      "component---src-layouts-index-js-e1d857d46dca80cc389b.js.map"
     ],
     "path---hi-folks": [
-      "path---hi-folks-f5c4f3266d73aedfbf7f.js",
-      "path---hi-folks-f5c4f3266d73aedfbf7f.js.map"
+      "path---hi-folks-4a7243236b5509fe39c4.js",
+      "path---hi-folks-4a7243236b5509fe39c4.js.map"
     ],
     "path---index": [
       "path---index-a0e39f21c11f6a62c5ab.js",
       "path---index-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---hello-world": [
-      "path---hello-world-c238fde065a18f125f8f.js",
-      "path---hello-world-c238fde065a18f125f8f.js.map"
+      "path---hello-world-1d2e88feb3d7f39c1449.js",
+      "path---hello-world-1d2e88feb3d7f39c1449.js.map"
     ],
     "commons": [
       "commons-8839ce0776ad044eaf81.js",
       "commons-8839ce0776ad044eaf81.js.map"
     ],
     "component---src-pages-new-page-js": [
-      "component---src-pages-new-page-js-2f4279f5d1a82359dfbf.js",
-      "component---src-pages-new-page-js-2f4279f5d1a82359dfbf.js.map"
+      "component---src-pages-new-page-js-478ac777d47673faf78d.js",
+      "component---src-pages-new-page-js-478ac777d47673faf78d.js.map"
     ],
     "app": [
-      "app-772175238d4619079906.js",
-      "app-772175238d4619079906.js.map"
+      "app-ba409e20652528d7b189.js",
+      "app-ba409e20652528d7b189.js.map"
     ]
   }
 }
