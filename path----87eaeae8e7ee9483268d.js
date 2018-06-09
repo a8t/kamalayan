@@ -1,0 +1,2 @@
+webpackJsonp([60335399758886],{115:function(t,e){t.exports={data:{site:{siteMetadata:{title:"Gatsby Starter - Dimension by HTML5 UP",description:"A Gatsby.js Starter based on Dimension by HTML5 UP"}}},layoutContext:{}}}});
+//# sourceMappingURL=path----87eaeae8e7ee9483268d.js.map
