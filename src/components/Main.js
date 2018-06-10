@@ -52,9 +52,10 @@ class Main extends React.Component {
                     </p>
                     <p>
                         If you're interested, you can view the application{' '}
-                        <a href={applicationURL}>here</a>. The deadline for
-                        applications is June 24, 2018. We look forward to
-                        hearing from you!
+                        <a href={applicationURL} target="_blank">
+                            here
+                        </a>. The deadline for applications is June 24, 2018. We
+                        look forward to hearing from you!
                     </p>
                     {close}
                 </article>
@@ -94,7 +95,10 @@ class Main extends React.Component {
                         below, or shoot us an email at{' '}
                         <a href="mailto:info@kamalayan.ca">info@kamalayan.ca</a>.
                         You can also find us on Facebook{' '}
-                        <a href="https://www.facebook.com/kamalayankonsciousness/">
+                        <a
+                            href="https://www.facebook.com/kamalayankonsciousness/"
+                            target="_blank"
+                        >
                             here
                         </a>.
                     </p>
