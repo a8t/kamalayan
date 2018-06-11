@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import PropTypes from 'prop-types'
 
 import pic01 from '../images/pic01.jpg'
 import pic02 from '../images/pic02.jpg'
@@ -139,11 +140,11 @@ class Main extends React.Component {
 }
 
 Main.propTypes = {
-    route: React.PropTypes.object,
-    article: React.PropTypes.string,
-    articleTimeout: React.PropTypes.bool,
-    onCloseArticle: React.PropTypes.func,
-    timeout: React.PropTypes.bool,
+    route: PropTypes.object,
+    article: PropTypes.string,
+    articleTimeout: PropTypes.bool,
+    onCloseArticle: PropTypes.func,
+    timeout: PropTypes.bool,
 }
 
 export default Main

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const Footer = props => (
     <footer id="footer" style={props.timeout ? { display: 'none' } : {}}>
@@ -10,7 +11,7 @@ const Footer = props => (
 )
 
 Footer.propTypes = {
-    timeout: React.PropTypes.bool,
+    timeout: PropTypes.bool,
 }
 
 export default Footer
