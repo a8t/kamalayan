@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import Header from '../components/Header'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
+import Toolbar from '../components/Toolbar'
 
 class Template extends React.Component {
     constructor(props) {
@@ -89,10 +90,11 @@ class Template extends React.Component {
         const { location, children } = this.props
 
         let rootPath = `/`
+        const isAtRootPath = location.pathname === rootPath
 
         let content
 
-        if (location.pathname === rootPath) {
+        if (isAtRootPath) {
             content = (
                 <div id="wrapper">
                     <Header
@@ -111,23 +113,30 @@ class Template extends React.Component {
             )
         } else {
             content = (
-                <div id="wrapper" className="page">
-                    <div
-                        style={{
-                            maxWidth: '1140px',
-                        }}
-                    >
-                        {children()}
+                <div
+                    id="wrapper"
+                    className={`page ${
+                        !isAtRootPath ? 'page-with-toolbar' : ''
+                    }`}
+                >
+                    <Toolbar />
+                    <div>
+                        <div
+                            style={{
+                                maxWidth: '1140px',
+                            }}
+                        >
+                            {children()}
+                        </div>
                     </div>
                 </div>
             )
         }
-
         return (
             <div
                 className={`body ${this.state.loading} ${
                     this.state.isArticleVisible ? 'is-article-visible' : ''
-                }`}
+                } ${!isAtRootPath ? 'body-with-toolbar' : ''}`}
             >
                 <Helmet>
                     <title>{siteTitle}</title>
