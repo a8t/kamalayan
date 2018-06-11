@@ -31,6 +31,17 @@ class Template extends React.Component {
         }, 100)
 
         document.addEventListener('keydown', this.handleKeyPress, false)
+        window.addEventListener(
+            'popstate',
+            event => {
+                if (this.props.location.pathname === '/') {
+                    this.setState({
+                        isArticleVisible: false,
+                    })
+                }
+            },
+            false
+        )
     }
 
     componentWillUnmount() {
@@ -110,7 +121,7 @@ class Template extends React.Component {
         })
 
         setTimeout(() => {
-            this.props.history.goBack()
+            this.props.history.push('/')
         }, 325)
 
         setTimeout(() => {
@@ -170,10 +181,6 @@ class Template extends React.Component {
                                 maxWidth: '1140px',
                             }}
                         >
-                            <Toolbar
-                                onBackButtonPress={this.handleBackButtonPress}
-                            />
-
                             {children()}
                         </div>
                     </div>
@@ -192,6 +199,9 @@ class Template extends React.Component {
                 </Helmet>
 
                 {content}
+                {!isAtRootPath && (
+                    <Toolbar onBackButtonPress={this.handleBackButtonPress} />
+                )}
 
                 <div id="bg" />
             </div>
