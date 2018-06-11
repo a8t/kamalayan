@@ -69,6 +69,9 @@ body {
 				font-size: 24px;
 				position: absolute;
 				cursor: pointer;
+				@include breakpoint(small) {
+					left: 15px;
+				}
 			}
 			.toolbar-blur {
 				position: fixed;
