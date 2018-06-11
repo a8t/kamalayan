@@ -28,7 +28,7 @@
 		@include vendor('transition', 'background-color #{_duration(bg)} ease-in-out');
 		@include vendor('transition-delay', '#{_duration(intro)}');
 		background-image: linear-gradient(to top, #{_palette(bg-overlay)}, #{_palette(bg-overlay)}),
-		url('https://i.imgur.com/4HlcaFz.png');
+		url('../../images/overlay.png');
 		background-size: auto, 256px 256px;
 		background-position: center, center;
 		background-repeat: no-repeat, repeat;
@@ -39,7 +39,7 @@
 		'scale(1.125)');
 		@include vendor('transition',
 		( 'transform #{_duration(article)} ease-in-out', 'filter #{_duration(article)} ease-in-out'));
-		background-image: url('https://i.imgur.com/VVApHzp.jpg');
+		background-image: url('../../images/bg.jpg');
 		background-position: right;
 		background-size: cover;
 		background-repeat: no-repeat;
