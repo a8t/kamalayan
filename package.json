@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-dimension",
-  "description": "Gatsby Starter - Dimension by HTML5 UP",
+  "name": "kamalayan",
+  "description": "Kamalayan | Konsciousnes",
   "version": "1.0.0",
-  "author": "Hunter Chang",
+  "author": "Andy Tran",
   "dependencies": {
     "gatsby": "^1.9.235",
     "gatsby-image": "^1.0.42",
