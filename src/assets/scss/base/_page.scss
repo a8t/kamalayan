@@ -22,6 +22,9 @@ body {
 	&.is-loading,
 	.body.is-loading,
 	&.is-switching {
+		.page-with-toolbar {
+			opacity: 0;
+		}
 		*,
 		*:before,
 		*:after {
@@ -30,18 +33,50 @@ body {
 			@include vendor('transition-delay', 'none !important');
 		}
 	}
+	$toolbar-height: 80px;
 	.body-with-toolbar {
-		max-height: calc(100vh - 50px);
-		margin-top: 50px;
+		max-height: calc(100vh - #{$toolbar-height});
+		margin-top: $toolbar-height;
 		overflow: hidden;
+		.page-timeout {
+			opacity: 0 !important;
+		}
+		.page-fade-in-timeout {
+			transition: opacity 0ms !important;
+		}
 		.page-with-toolbar {
+			opacity: 1;
+			transition: opacity 300ms ease-in-out;
 			overflow: scroll;
 			max-height: 100vh;
 			.toolbar {
 				position: fixed;
-				height: 50px;
-				width: 100%;
+				height: $toolbar-height;
+				width: 90vw;
+				max-width: 1140px;
 				top: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				.toolbar-title {
+					margin: 0;
+					z-index: 2;
+				}
+				.back-arrow {
+					left: 0;
+					border-bottom: none;
+					font-size: 24px;
+					position: absolute;
+					cursor: pointer;
+				}
+				.toolbar-blur {
+					position: fixed;
+					height: $toolbar-height;
+					left: 0;
+					right: 0;
+					top: 0;
+					background: rgba(0, 0, 0, 0.2);
+				}
 			}
 		}
 	}

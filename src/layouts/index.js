@@ -16,10 +16,13 @@ class Template extends React.Component {
             articleTimeout: false,
             article: '',
             loading: 'is-loading',
+            pageTimeout: false,
         }
         this.handleOpenArticle = this.handleOpenArticle.bind(this)
         this.handleCloseArticle = this.handleCloseArticle.bind(this)
         this.handleKeyPress = this.handleKeyPress.bind(this)
+        this.handleBackButtonPress = this.handleBackButtonPress.bind(this)
+        this.handleOpenLink = this.handleOpenLink.bind(this)
     }
 
     componentDidMount() {
@@ -84,6 +87,41 @@ class Template extends React.Component {
         }
     }
 
+    handleOpenLink(link) {
+        this.setState({
+            isArticleVisible: !this.state.isArticleVisible,
+        })
+
+        setTimeout(() => {
+            this.props.history.push(link)
+
+            this.setState({ pageTimeout: true, pageFadeInTimeOut: true })
+
+            setTimeout(() => {
+                this.setState({ pageTimeout: false, pageFadeInTimeOut: false })
+            }, 10)
+        }, 325)
+    }
+
+    handleBackButtonPress() {
+        this.setState({
+            pageTimeout: true,
+            timeout: false,
+        })
+
+        setTimeout(() => {
+            this.props.history.goBack()
+        }, 325)
+
+        setTimeout(() => {
+            this.setState({
+                isArticleVisible: false,
+                article: '',
+                pageTimeout: false,
+            })
+        }, 350)
+    }
+
     render() {
         const siteTitle = this.props.data.site.siteMetadata.title
         const siteDescription = this.props.data.site.siteMetadata.description
@@ -92,17 +130,20 @@ class Template extends React.Component {
         let rootPath = `/`
         const isAtRootPath = location.pathname === rootPath
 
+        const isArticleVisible = !isAtRootPath || this.state.isArticleVisible
+
         let content
 
         if (isAtRootPath) {
             content = (
                 <div id="wrapper">
                     <Header
+                        onOpenLink={this.handleOpenLink}
                         onOpenArticle={this.handleOpenArticle}
                         timeout={this.state.timeout}
                     />
                     <Main
-                        isArticleVisible={this.state.isArticleVisible}
+                        isArticleVisible={isArticleVisible}
                         timeout={this.state.timeout}
                         articleTimeout={this.state.articleTimeout}
                         article={this.state.article}
@@ -117,15 +158,22 @@ class Template extends React.Component {
                     id="wrapper"
                     className={`page ${
                         !isAtRootPath ? 'page-with-toolbar' : ''
+                    } ${this.state.pageTimeout ? 'page-timeout' : ''} ${
+                        this.state.pageFadeInTimeOut
+                            ? 'page-fade-in-timeout'
+                            : ''
                     }`}
                 >
-                    <Toolbar />
                     <div>
                         <div
                             style={{
                                 maxWidth: '1140px',
                             }}
                         >
+                            <Toolbar
+                                onBackButtonPress={this.handleBackButtonPress}
+                            />
+
                             {children()}
                         </div>
                     </div>
@@ -135,7 +183,7 @@ class Template extends React.Component {
         return (
             <div
                 className={`body ${this.state.loading} ${
-                    this.state.isArticleVisible ? 'is-article-visible' : ''
+                    isArticleVisible ? 'is-article-visible' : ''
                 } ${!isAtRootPath ? 'body-with-toolbar' : ''}`}
             >
                 <Helmet>
