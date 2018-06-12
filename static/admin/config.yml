@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: a8t/kamalayan
 
 media_folder: static/assets
