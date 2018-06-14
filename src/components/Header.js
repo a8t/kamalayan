@@ -7,7 +7,7 @@ import {
     palette,
     font,
     breakpoints,
-} from './styleVariables.json'
+} from '../assets/styleVariables.json'
 
 import ka from '../images/ka.svg'
 

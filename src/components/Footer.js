@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import styleVariables from './styleVariables.json'
+import styleVariables from '../assets/styleVariables.json'
 
 const FooterContainer = styled.footer`
     display: ${props => (props.timeout ? 'none' : '')};
