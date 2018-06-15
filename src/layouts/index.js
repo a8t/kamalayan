@@ -130,7 +130,6 @@ class Template extends React.Component {
     }
 
     render() {
-        console.log(this.state)
         const siteTitle = this.props.data.site.siteMetadata.title
         const siteDescription = this.props.data.site.siteMetadata.description
         const { location, children } = this.props

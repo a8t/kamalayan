@@ -30,8 +30,9 @@ body {
         *,
         *:before,
         *:after {
-            opacity: 0;
             -webkit-transform-style: preserve-3d;
+            -webkit-backface-visibility: hidden;
+            -webkit-transform: translate3d(0, 0, 0);
             @include vendor('animation', 'none !important');
             @include vendor('transition', 'none !important');
             @include vendor('transition-delay', 'none !important');
