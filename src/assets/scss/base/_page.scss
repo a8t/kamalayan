@@ -21,6 +21,7 @@ body {
         bg
     ); // Prevents animation/transition "flicker" on page load.
     // Automatically added/removed by js/main.js.
+    backface-visibility: hidden !important;
     &.is-loading,
     .body.is-loading,
     &.is-switching {
@@ -30,13 +31,18 @@ body {
         *,
         *:before,
         *:after {
-            -webkit-transform-style: preserve-3d;
-            -webkit-backface-visibility: hidden;
-            -webkit-transform: translate3d(0, 0, 0);
             @include vendor('animation', 'none !important');
             @include vendor('transition', 'none !important');
             @include vendor('transition-delay', 'none !important');
         }
+    }
+    .body.is-loading *,
+    .body.is-loading :after,
+    .body.is-loading :before,
+    &.is-loading *,
+    &.is-loading :after,
+    &.is-loading :before {
+        opacity: 0.01;
     }
     $toolbar-height: 80px;
     .body-with-toolbar {
