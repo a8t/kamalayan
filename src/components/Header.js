@@ -112,7 +112,10 @@ const HeaderContainer = styled.header`
         filter: blur(0.1rem);
         opacity: 0.01;
     }
+    body.is-loading &,
     .body.is-loading & {
+        opacity: 0.01;
+
         > *,
         > *::after,
         > *::before {
