@@ -26,9 +26,9 @@ class Template extends React.Component {
     }
 
     componentDidMount() {
-        this.timeoutId = setTimeout(() => {
+        requestAnimationFrame(() => {
             this.setState({ loading: '' })
-        }, 100)
+        })
 
         document.addEventListener('keydown', this.handleKeyPress, false)
         window.addEventListener(
@@ -45,9 +45,6 @@ class Template extends React.Component {
     }
 
     componentWillUnmount() {
-        if (this.timeoutId) {
-            clearTimeout(this.timeoutId)
-        }
         document.removeEventListener('keydown', this.handleKeyPress, false)
     }
 
@@ -61,13 +58,12 @@ class Template extends React.Component {
             this.setState({
                 timeout: !this.state.timeout,
             })
-        }, 325)
-
-        setTimeout(() => {
-            this.setState({
-                articleTimeout: !this.state.articleTimeout,
+            requestAnimationFrame(() => {
+                this.setState({
+                    articleTimeout: !this.state.articleTimeout,
+                })
             })
-        }, 350)
+        }, 325)
     }
 
     handleCloseArticle() {
@@ -79,14 +75,13 @@ class Template extends React.Component {
             this.setState({
                 timeout: !this.state.timeout,
             })
-        }, 325)
-
-        setTimeout(() => {
-            this.setState({
-                isArticleVisible: !this.state.isArticleVisible,
-                article: '',
+            requestAnimationFrame(() => {
+                this.setState({
+                    isArticleVisible: !this.state.isArticleVisible,
+                    article: '',
+                })
             })
-        }, 350)
+        }, 325)
     }
 
     handleKeyPress(event) {
@@ -110,9 +105,9 @@ class Template extends React.Component {
 
             this.setState({ pageTimeout: true, pageFadeInTimeOut: true })
 
-            setTimeout(() => {
+            requestAnimationFrame(() => {
                 this.setState({ pageTimeout: false, pageFadeInTimeOut: false })
-            }, 10)
+            })
         }, 325)
     }
 
@@ -124,15 +119,14 @@ class Template extends React.Component {
 
         setTimeout(() => {
             this.props.history.push('/')
-        }, 325)
-
-        setTimeout(() => {
-            this.setState({
-                isArticleVisible: false,
-                article: '',
-                pageTimeout: false,
+            requestAnimationFrame(() => {
+                this.setState({
+                    isArticleVisible: false,
+                    article: '',
+                    pageTimeout: false,
+                })
             })
-        }, 350)
+        }, 325)
     }
 
     render() {
@@ -169,23 +163,35 @@ class Template extends React.Component {
             )
         } else {
             content = (
-                <div
-                    id="wrapper"
-                    className={`page ${
-                        !isAtRootPath ? 'page-with-toolbar' : ''
-                    } ${this.state.pageTimeout ? 'page-timeout' : ''} ${
-                        this.state.pageFadeInTimeOut
-                            ? 'page-fade-in-timeout'
-                            : ''
-                    }`}
-                >
-                    <div>
-                        <div
-                            style={{
-                                maxWidth: '1140px',
-                            }}
-                        >
-                            {children()}
+                <div>
+                    <Toolbar
+                        className={`${
+                            this.state.pageTimeout ? 'page-timeout' : ''
+                        } ${
+                            this.state.pageFadeInTimeOut
+                                ? 'page-fade-in-timeout'
+                                : ''
+                        }`}
+                        onBackButtonPress={this.handleBackButtonPress}
+                    />
+                    <div
+                        id="wrapper"
+                        className={`page ${
+                            !isAtRootPath ? 'page-with-toolbar' : ''
+                        } ${this.state.pageTimeout ? 'page-timeout' : ''} ${
+                            this.state.pageFadeInTimeOut
+                                ? 'page-fade-in-timeout'
+                                : ''
+                        }`}
+                    >
+                        <div>
+                            <div
+                                style={{
+                                    maxWidth: '1140px',
+                                }}
+                            >
+                                {children()}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -203,9 +209,6 @@ class Template extends React.Component {
                 </Helmet>
 
                 {content}
-                {!isAtRootPath && (
-                    <Toolbar onBackButtonPress={this.handleBackButtonPress} />
-                )}
 
                 <div id="bg" />
             </div>

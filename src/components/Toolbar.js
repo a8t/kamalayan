@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 class Toolbar extends Component {
     render() {
         return (
-            <div className="toolbar">
+            <div className={`toolbar ${this.props.className}`}>
                 <div className="toolbar-blur" />
                 <i
                     className="fa fa-arrow-left back-arrow"

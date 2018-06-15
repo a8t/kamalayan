@@ -31,6 +31,7 @@ body {
         *:before,
         *:after {
             opacity: 0;
+            -webkit-transform-style: preserve-3d;
             @include vendor('animation', 'none !important');
             @include vendor('transition', 'none !important');
             @include vendor('transition-delay', 'none !important');
@@ -54,6 +55,7 @@ body {
             max-height: 100vh;
         }
         .toolbar {
+            transition: opacity 100ms ease-in 0.2s;
             z-index: 4;
             position: fixed;
             height: $toolbar-height;
