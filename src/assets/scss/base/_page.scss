@@ -7,80 +7,83 @@
 
 // MSIE: Required for IEMobile.
 @-ms-viewport {
-	width: device-width;
+    width: device-width;
 } // Ensures page width is always >=320px.
 @include breakpoint(xsmall) {
-	html,
-	body {
-		min-width: 320px;
-	}
+    html,
+    body {
+        min-width: 320px;
+    }
 }
 
 body {
-	background: _palette(bg); // Prevents animation/transition "flicker" on page load.
-	// Automatically added/removed by js/main.js.
-	&.is-loading,
-	.body.is-loading,
-	&.is-switching {
-		.page-with-toolbar {
-			opacity: 0;
-		}
-		*,
-		*:before,
-		*:after {
-			@include vendor('animation', 'none !important');
-			@include vendor('transition', 'none !important');
-			@include vendor('transition-delay', 'none !important');
-		}
-	}
-	$toolbar-height: 80px;
-	.body-with-toolbar {
-		max-height: calc(100vh - #{$toolbar-height});
-		margin-top: $toolbar-height;
-		overflow: hidden;
-		.page-timeout {
-			opacity: 0 !important;
-		}
-		.page-fade-in-timeout {
-			transition: opacity 0ms !important;
-		}
-		.page-with-toolbar {
-			opacity: 1;
-			transition: opacity 300ms ease-in-out;
-			overflow: scroll;
-			max-height: 100vh;
-		}
-		.toolbar {
-			z-index: 4;
-			position: fixed;
-			height: $toolbar-height;
-			width: 100vw;
-			top: 0;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			.toolbar-title {
-				margin: 0;
-				z-index: 2;
-			}
-			.back-arrow {
-				left: 32px;
-				border-bottom: none;
-				font-size: 24px;
-				position: absolute;
-				cursor: pointer;
-				@include breakpoint(small) {
-					left: 15px;
-				}
-			}
-			.toolbar-blur {
-				position: fixed;
-				height: $toolbar-height;
-				left: 0;
-				right: 0;
-				top: 0;
-				background: rgba(0, 0, 0, 0.2);
-			}
-		}
-	}
+    background: _palette(
+        bg
+    ); // Prevents animation/transition "flicker" on page load.
+    // Automatically added/removed by js/main.js.
+    &.is-loading,
+    .body.is-loading,
+    &.is-switching {
+        .page-with-toolbar {
+            opacity: 0;
+        }
+        *,
+        *:before,
+        *:after {
+            opacity: 0;
+            @include vendor('animation', 'none !important');
+            @include vendor('transition', 'none !important');
+            @include vendor('transition-delay', 'none !important');
+        }
+    }
+    $toolbar-height: 80px;
+    .body-with-toolbar {
+        max-height: calc(100vh - #{$toolbar-height});
+        margin-top: $toolbar-height;
+        overflow: hidden;
+        .page-timeout {
+            opacity: 0 !important;
+        }
+        .page-fade-in-timeout {
+            transition: opacity 0ms !important;
+        }
+        .page-with-toolbar {
+            opacity: 1;
+            transition: opacity 300ms ease-in-out;
+            overflow: scroll;
+            max-height: 100vh;
+        }
+        .toolbar {
+            z-index: 4;
+            position: fixed;
+            height: $toolbar-height;
+            width: 100vw;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .toolbar-title {
+                margin: 0;
+                z-index: 2;
+            }
+            .back-arrow {
+                left: 32px;
+                border-bottom: none;
+                font-size: 24px;
+                position: absolute;
+                cursor: pointer;
+                @include breakpoint(small) {
+                    left: 15px;
+                }
+            }
+            .toolbar-blur {
+                position: fixed;
+                height: $toolbar-height;
+                left: 0;
+                right: 0;
+                top: 0;
+                background: rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
 }
