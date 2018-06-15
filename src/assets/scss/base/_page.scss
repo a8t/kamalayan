@@ -25,7 +25,7 @@ body {
     .body.is-loading,
     &.is-switching {
         .page-with-toolbar {
-            opacity: 0;
+            opacity: 0.01;
         }
         *,
         *:before,
@@ -44,7 +44,7 @@ body {
         margin-top: $toolbar-height;
         overflow: hidden;
         .page-timeout {
-            opacity: 0 !important;
+            opacity: 0.01 !important;
         }
         .page-fade-in-timeout {
             transition: opacity 0ms !important;

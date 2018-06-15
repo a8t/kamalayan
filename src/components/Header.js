@@ -110,11 +110,13 @@ const HeaderContainer = styled.header`
     .body.is-article-visible & {
         transform: scale(0.95);
         filter: blur(0.1rem);
-        opacity: 0;
+        opacity: 0.01;
     }
     .body.is-loading & {
-        > * {
-            opacity: 0;
+        > *,
+        > *::after,
+        > *::before {
+            opacity: 0.01;
         }
         filter: blur(0.125rem);
         .content {
