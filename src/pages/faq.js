@@ -71,8 +71,8 @@ class FaqPage extends React.Component {
                 </p>
                 <h2>Is there a cost?</h2>
                 <p>
-                    The cost is free for participants. Tokens will be provided
-                    and food will be available during the sessions.
+                    The programs is free for participants. TTC tokens will also
+                    be provided, and food will be available during the sessions.
                 </p>
                 <h2>What will be learned?</h2>
                 <p>
@@ -119,6 +119,18 @@ class FaqPage extends React.Component {
                     </li>
                     <li>Use of Filipino-English language in news media</li>
                 </ul>
+                <h2>How do I get involved?</h2>
+                <p>
+                    Glad you asked! You can find the application{' '}
+                    <a
+                        href="https://goo.gl/forms/4mosbV2stTlZGMXW2"
+                        target="_blank"
+                        ref="noopen"
+                    >
+                        here.
+                    </a>{' '}
+                    The deadline is June 24, 2018.
+                </p>
             </FaqContainer>
         )
     }
