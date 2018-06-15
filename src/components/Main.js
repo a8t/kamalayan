@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 class Main extends React.Component {
     render() {
@@ -48,12 +49,31 @@ class Main extends React.Component {
                         the Philippines.
                     </p>
                     <p>
-                        If you're interested, you can view the application{' '}
-                        <a href={applicationURL} target="_blank">
-                            here
-                        </a>. The deadline for applications is June 24, 2018. We
-                        look forward to hearing from you!
+                        The deadline for applications is June 24, 2018. We look
+                        forward to hearing from you!
                     </p>
+                    <div style={{ marginBottom: '20px' }}>
+                        <a
+                            className="button"
+                            href="https://goo.gl/forms/4mosbV2stTlZGMXW2"
+                            target="_blank"
+                            ref="noopen"
+                        >
+                            Apply now
+                        </a>
+
+                        <a
+                            style={{ marginLeft: '20px' }}
+                            className="button"
+                            href="/faq"
+                            onClick={e => {
+                                e.preventDefault()
+                                this.props.onOpenLink('/faq')
+                            }}
+                        >
+                            Find out more
+                        </a>
+                    </div>
                     {close}
                 </article>
 

@@ -126,7 +126,7 @@ const HeaderContainer = styled.header`
             }
         }
     }
-    @media screen and (${breakpoints.medium}) {
+    @media screen and ${breakpoints.medium} {
         .content {
             p {
                 br {
@@ -135,7 +135,7 @@ const HeaderContainer = styled.header`
             }
         }
     }
-    @media screen and (${breakpoints.small}) {
+    @media screen and ${breakpoints.small} {
         > * {
             margin-top: 2rem;
             &:before {
@@ -161,11 +161,26 @@ const HeaderContainer = styled.header`
             }
         }
     }
-    @media screen and (${breakpoints.xsmall}) {
+    @media screen and ${breakpoints.xsmall} {
         padding: 1.5rem 0;
+
         .content {
             .inner {
                 padding: 2.5rem 0;
+            }
+        }
+    }
+    @media screen and (max-width: 420px) {
+        .content {
+            .inner {
+                padding: 2.5rem 0;
+                .title {
+                    font-size: 13vw;
+                }
+                .subtitle {
+                    font-size: 7vw;
+                    letter-spacing: 2vw;
+                }
             }
         }
     }
@@ -180,6 +195,7 @@ const Nav = styled.nav`
         border: solid ${size.borderWidth} ${palette.border};
         border-radius: ${size.borderRadius};
         li {
+            min-width: 300px;
             padding-left: 0;
             border-left: solid ${size.borderWidth} ${palette.border};
             &:first-child {
@@ -224,7 +240,15 @@ const Nav = styled.nav`
         }
     }
 
-    @media screen and (${breakpoints.xsmall}) {
+    @media screen and ${breakpoints.xlarge} {
+        ul {
+            li {
+                min-width: 200px;
+            }
+        }
+    }
+
+    @media screen and ${breakpoints.medium} {
         ul {
             flex-direction: column;
             min-width: 10rem;
@@ -282,6 +306,26 @@ const Header = props => (
                         }}
                     >
                         Midya Project 2018
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="javascript:;"
+                        onClick={() => {
+                            props.onOpenLink('/faq')
+                        }}
+                    >
+                        FAQ
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="javascript:;"
+                        onClick={() => {
+                            props.onOpenLink('/links')
+                        }}
+                    >
+                        Links
                     </a>
                 </li>
                 <li>

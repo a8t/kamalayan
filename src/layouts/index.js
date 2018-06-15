@@ -100,7 +100,9 @@ class Template extends React.Component {
 
     handleOpenLink(link) {
         this.setState({
-            isArticleVisible: !this.state.isArticleVisible,
+            isArticleVisible: false,
+            articleTimeout: false,
+            article: '',
         })
 
         setTimeout(() => {
@@ -134,6 +136,7 @@ class Template extends React.Component {
     }
 
     render() {
+        console.log(this.state)
         const siteTitle = this.props.data.site.siteMetadata.title
         const siteDescription = this.props.data.site.siteMetadata.description
         const { location, children } = this.props
@@ -159,6 +162,7 @@ class Template extends React.Component {
                         articleTimeout={this.state.articleTimeout}
                         article={this.state.article}
                         onCloseArticle={this.handleCloseArticle}
+                        onOpenLink={this.handleOpenLink}
                     />
                     <Footer timeout={this.state.timeout} />
                 </div>
