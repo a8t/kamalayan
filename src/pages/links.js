@@ -107,9 +107,8 @@ const ListItemLink = styled.a`
         margin-right: 40px;
         position: relative;
         &::before {
-            border-right: 2px solid rgba(255, 255, 255, 0.3);
+            border-right: 1px solid rgba(255, 255, 255, 0.5);
             content: '';
-            color: blue;
             height: 100%;
             position: absolute;
             right: -20px;
@@ -129,13 +128,14 @@ class Links extends React.Component {
                         href={eachUrl.url}
                         ref="noopen"
                         target="_blank"
+                        key={eachUrl.url}
                     >
                         {eachUrl.urlDescription}
                     </ListItemLink>
                 )
             })
             return (
-                <ListItem>
+                <ListItem key={eachOrg.organizationName}>
                     <ListItemTitle>{eachOrg.organizationName}</ListItemTitle>
                     {links}
                 </ListItem>
