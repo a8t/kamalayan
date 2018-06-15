@@ -204,7 +204,15 @@ class Template extends React.Component {
             >
                 <Helmet>
                     <title>{siteTitle}</title>
-                    <meta name="description" content={siteDescription} />
+                    <meta
+                        name="Kamalayan Konsciousness"
+                        content={siteDescription}
+                    />
+
+                    <meta
+                        property="og:image"
+                        content="https://i.imgur.com/VVApHzp.jpg"
+                    />
                 </Helmet>
 
                 {content}
