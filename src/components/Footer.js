@@ -35,8 +35,10 @@ const FooterContainer = styled.footer`
 const Footer = props => (
     <FooterContainer timeout={props.timeout}>
         <p className="copyright">
-            &copy; Kamalayan. Image:{' '}
-            <a href="http://hannah.ph">Hannah Reyes Morales</a>.
+            Image: <a href="http://hannah.ph">Hannah Reyes Morales</a>. Design:{' '}
+            <a href="https://html5up.net/" target="_blank">
+                HTML5Up
+            </a>
         </p>
     </FooterContainer>
 )
