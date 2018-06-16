@@ -37,6 +37,9 @@ class Template extends React.Component {
                 if (this.props.location.pathname === '/') {
                     this.setState({
                         isArticleVisible: false,
+                        timeout: false,
+                        articleTimeout: false,
+                        article: '',
                     })
                 }
             },
