@@ -20,6 +20,15 @@ const LinksContainer = styled.div`
 
 const linksData = [
     {
+        organizationName: 'Kamalayan Konsciousness',
+        urls: [
+            {
+                url: 'https://www.facebook.com/kamalayankonsciousness/',
+                urlDescription: 'Facebook',
+            },
+        ],
+    },
+    {
         organizationName: 'Anakbayan Toronto',
         urls: [
             {
