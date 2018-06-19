@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import poster from '../images/poster.jpg'
 
 class Main extends React.Component {
     render() {
@@ -35,18 +36,20 @@ class Main extends React.Component {
                 >
                     <h2 className="major">Kamalayan Midya Project 2018</h2>
                     <p>
-                        In collaboration with{' '}
-                        <a href="https://artreach.org/" target="_blank">
-                            ArtReach
-                        </a>{' '}
-                        in Toronto, Kamalyan is putting together a summer media
-                        project for Filipino youth in the Toronto area. Our
-                        goals are to get youth involved with media production;
-                        to develop their technical, program development, and
-                        speaking skills for radio and TV; and to inspire them to
-                        create social change. We strive to connect Philippine
-                        youth to their culture and to issues in both Canada and
-                        the Philippines.
+                        The Kamalayan Youth Midya Project is a media production
+                        program which includes training for radio, and tv
+                        production as well as lessons of Philippine history and
+                        current events in the community.
+                    </p>
+                    <p>
+                        In the past, youth in the Kamalayan collective who
+                        wanted to be involved in media were invited on a drop in
+                        basis. Youth assisted in the studio and attended free
+                        training from the community radio station. This project
+                        idea is the result of our collective’s years of
+                        experience as media volunteers. We hope to broaden the
+                        Filipino youth voice by working with our partners Radyo
+                        Migrante and TV Migrante.
                     </p>
                     <p>
                         The deadline for applications is June 24, 2018. We look
