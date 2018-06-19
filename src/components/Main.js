@@ -2,9 +2,20 @@ import React from 'react'
 import Link from 'gatsby-link'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import Lightbox from 'react-images'
 import poster from '../images/poster.jpg'
 
 class Main extends React.Component {
+    state = {
+        isLightboxOpen: false,
+    }
+
+    closeLightbox = () => {
+        this.setState({
+            isLightboxOpen: false,
+        })
+    }
+
     render() {
         let close = (
             <div
@@ -35,6 +46,24 @@ class Main extends React.Component {
                     style={{ display: 'none' }}
                 >
                     <h2 className="major">Kamalayan Midya Project 2018</h2>
+                    <Lightbox
+                        images={[{ src: 'https://i.imgur.com/hrfQAZA.jpg' }]}
+                        isOpen={this.state.isLightboxOpen}
+                        onClose={this.closeLightbox}
+                        onClickImage={e => {
+                            window.open(e.target.src, '_blank')
+                        }}
+                    />
+                    <div
+                        className="poster-img--container"
+                        onClick={() => this.setState({ isLightboxOpen: true })}
+                    >
+                        <img
+                            className="poster-img--image"
+                            src={poster}
+                            alt="KMP Poster"
+                        />
+                    </div>
                     <p>
                         The Kamalayan Youth Midya Project is a media production
                         program which includes training for radio, and tv
