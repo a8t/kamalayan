@@ -76,23 +76,6 @@ const linksData = [
             },
         ],
     },
-    {
-        organizationName: 'Kapisanan Philippine Centre for Arts & Culture',
-        urls: [
-            {
-                organizationUrl: 'http://www.kapisanancentre.com/',
-                urlDescription: 'Website',
-            },
-            {
-                organizationUrl: 'https://www.facebook.com/kapisanan/',
-                urlDescription: 'Facebook',
-            },
-            {
-                organizationUrl: 'https://twitter.com/kapisanan',
-                urlDescription: 'Twitter',
-            },
-        ],
-    },
 ]
 
 const ListItem = styled.li`
