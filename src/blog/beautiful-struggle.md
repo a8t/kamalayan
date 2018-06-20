@@ -5,10 +5,14 @@ title: Our Beautiful Struggle, Our Revolutionary Heritage
 author: Anakbayan Toronto
 ---
 
+<div>
 AB-TO on Philippine Independence Day 2018
 
 Reference: Inaj Mae Abalajon, Chairperson, Anakbyan-Toronto
+
 Email: anakbayan.toronto@gmail.com
+
+</div>
 
 The year 2018 would be the first to witness Toronto celebrating June as Filipino Heritage Month”, generally considered a significant gesture for the fastest growing immigrant community in Canada in recent years. This is also anchored on the 120th year since Philippine independence was declared on June 12, a date that signalled the breakaway of the country from the chains of Spanish colonialism.
 

@@ -23,8 +23,8 @@ const Content = styled.div`
         cursor: normal;
     }
 
-    p:first-child:first-letter,
-    center + p:first-letter {
+    > p:first-of-type:first-letter,
+    > center + p:first-letter {
         color: #903;
         float: left;
         font-family: Georgia;
