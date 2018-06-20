@@ -4,11 +4,15 @@ import Lightbox from 'react-images'
 import poster from '../images/poster.jpg'
 
 class Main extends React.Component {
-    state = {
-        isLightboxOpen: false,
+    constructor(props) {
+        super(props)
+        this.state = {
+            isLightboxOpen: false,
+        }
+        this.closeLightbox = this.closeLightbox.bind(this)
     }
 
-    closeLightbox = () => {
+    closeLightbox() {
         this.setState({
             isLightboxOpen: false,
         })
