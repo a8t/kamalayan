@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Inndex = () => {
+const Index = () => {
     return <div />
 }
 
-export default Inndex
+export default Index
