@@ -36,7 +36,7 @@ const Content = styled.div`
     }
 `
 
-const AuthorDate = styled.h2`
+const AuthorDate = styled.div`
     text-align: center;
     margin-top: 40px;
     margin-bottom: 80px;
@@ -56,8 +56,10 @@ class BlogPostTemplate extends React.Component {
                 <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
                 <AuthorDate>
                     <h1>{post.frontmatter.title}</h1>
-                    {post.frontmatter.author} <Divider>|</Divider>{' '}
-                    {post.frontmatter.date}
+                    <h2>
+                        {post.frontmatter.author} <Divider>|</Divider>{' '}
+                        {post.frontmatter.date}
+                    </h2>
                 </AuthorDate>
                 <Content dangerouslySetInnerHTML={{ __html: post.html }} />
                 <hr />

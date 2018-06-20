@@ -11,11 +11,15 @@ const Container = styled.div`
 
     @media screen and (min-width: ${breakpoints.nums.large}px) {
         padding: 0 100px;
-        flex-direction: ${() =>
-            location.pathname.split('/').length > 2 ? 'row-reverse' : 'column'};
+        flex-direction: ${props =>
+            props.location.pathname.split('/').length > 2
+                ? 'row-reverse'
+                : 'column'};
         justify-content: flex-start;
-        align-items: ${() =>
-            location.pathname.split('/').length > 2 ? 'flex-start' : 'center'};
+        align-items: ${props =>
+            props.location.pathname.split('/').length > 2
+                ? 'flex-start'
+                : 'center'};
         & > *:first-child {
             margin-right: 20px;
         }
@@ -26,12 +30,13 @@ class BlogLayout extends Component {
     render() {
         const {
             blog: { edges },
+            location,
         } = this.props
 
         return (
-            <Container>
+            <Container location={location}>
                 {this.props.children}
-                {RecentPosts(edges)}
+                {RecentPosts({ edges, location })}
             </Container>
         )
     }

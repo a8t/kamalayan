@@ -14,8 +14,8 @@ const Container = styled.div`
         width: 600px;
     }
 
-    display: ${() =>
-        location.pathname.split('/').length > 2 ? 'block' : 'none'};
+    display: ${props =>
+        props.location.pathname.split('/').length > 2 ? 'block' : 'none'};
     background: ${palette.bgOverlay};
     padding: 30px;
     margin-bottom: 100px;
@@ -48,10 +48,10 @@ const PostLink = ({ post }) => (
     </LinkContainer>
 )
 
-const RecentPosts = edges => {
+const RecentPosts = ({ edges, location }) => {
     return (
         <MainContainer>
-            <Container>
+            <Container location={location}>
                 <Title>Recent</Title>
                 <List>
                     {edges

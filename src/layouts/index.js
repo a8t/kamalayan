@@ -191,6 +191,7 @@ class Template extends React.Component {
                     >
                         {isBlogPage ? (
                             <BlogLayout
+                                location={location}
                                 children={children()}
                                 blog={this.props.data.allMarkdownRemark}
                             />
