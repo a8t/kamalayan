@@ -43,6 +43,14 @@
         "medium": "(max-width: 1080px)",
         "small": "(max-width: 736px)",
         "xsmall": "(max-width: 646px)",
-        "xxsmall": "(max-width: 360px)"
+        "xxsmall": "(max-width: 360px)",
+        "nums": {
+            "xlarge": 1680,
+            "large": 1280,
+            "medium": 1080,
+            "small": 736,
+            "xsmall": 646,
+            "xxsmall": 360
+        }
     }
 }
