@@ -1,6 +1,5 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
 import get from 'lodash/get'
 import styled from 'styled-components'
 import { palette, breakpoints } from 'assets/styleVariables.json'

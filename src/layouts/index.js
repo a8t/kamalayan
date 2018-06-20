@@ -7,7 +7,7 @@ import Main from '../components/Main'
 import Footer from '../components/Footer'
 import Toolbar from '../components/Toolbar'
 
-import BlogLayout from './BlogLayout'
+import BlogLayout from '../components/blogComponents/BlogLayout'
 
 class Template extends React.Component {
     constructor(props) {
