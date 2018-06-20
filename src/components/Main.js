@@ -2,7 +2,10 @@ import React from 'react'
 import Link from 'gatsby-link'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import Lightbox from 'react-image-lightbox'
+let Lightbox
+if (typeof window !== `undefined`) {
+    Lightbox = require('react-image-lightbox').default
+}
 import 'react-image-lightbox/style.css'
 import poster from '../images/poster.jpg'
 
