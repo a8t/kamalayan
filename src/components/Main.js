@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Lightbox from 'react-images'
-import poster from '../images/poster.jpg'
 
 class Main extends React.Component {
     constructor(props) {
@@ -62,7 +61,7 @@ class Main extends React.Component {
                     >
                         <img
                             className="poster-img--image"
-                            src={poster}
+                            src="https://i.imgur.com/hrfQAZA.jpg"
                             alt="KMP Poster"
                         />
                     </div>
