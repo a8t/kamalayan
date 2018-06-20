@@ -57,5 +57,9 @@ module.exports = {
         `gatsby-plugin-sharp`,
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-sass`,
+        {
+            resolve: `gatsby-plugin-styled-components`,
+            options: {},
+        },
     ],
 }
