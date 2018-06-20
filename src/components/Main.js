@@ -35,6 +35,16 @@ class Main extends React.Component {
                     style={{ display: 'none' }}
                 >
                     <h2 className="major">Kamalayan Midya Project 2018</h2>
+                    <div
+                        className="poster-img--container"
+                        onClick={() => this.setState({ isLightboxOpen: true })}
+                    >
+                        <img
+                            className="poster-img--image"
+                            src={poster}
+                            alt="KMP Poster"
+                        />
+                    </div>
                     <p>
                         The Kamalayan Youth Midya Project is a media production
                         program which includes training for radio, and tv
