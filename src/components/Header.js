@@ -297,16 +297,6 @@ const Header = props => (
                     <a
                         href="javascript:;"
                         onClick={() => {
-                            props.onOpenArticle('about')
-                        }}
-                    >
-                        About
-                    </a>
-                </li>
-                <li>
-                    <a
-                        href="javascript:;"
-                        onClick={() => {
                             props.onOpenArticle('midya')
                         }}
                     >
@@ -321,6 +311,16 @@ const Header = props => (
                         }}
                     >
                         FAQ
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="javascript:;"
+                        onClick={() => {
+                            props.onOpenLink('/blog')
+                        }}
+                    >
+                        Blog
                     </a>
                 </li>
                 <li>
