@@ -46,6 +46,11 @@ class Main extends React.Component {
                     style={{ display: 'none' }}
                 >
                     <h2 className="major">Kamalayan Midya Project 2018</h2>
+                    <Lightbox
+                        images={[{ src: 'https://i.imgur.com/hrfQAZA.jpg' }]}
+                        isOpen={this.state.isLightboxOpen}
+                        onClose={this.closeLightbox}
+                    />
                     <div
                         className="poster-img--container"
                         onClick={() => this.setState({ isLightboxOpen: true })}
