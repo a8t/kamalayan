@@ -7,7 +7,7 @@ class Toolbar extends Component {
             <div className={`toolbar ${this.props.className}`}>
                 <div className="toolbar-blur" />
                 <i
-                    className="fa fa-arrow-left back-arrow"
+                    className="fa fa-home back-arrow"
                     onClick={this.props.onBackButtonPress}
                 />
                 <h1 className="toolbar-title">KAMALAYAN</h1>
