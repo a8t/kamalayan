@@ -145,7 +145,6 @@ class Template extends React.Component {
         const isArticleVisible = !isAtRootPath || this.state.isArticleVisible
 
         const isBlogPage = location.pathname.split('/').indexOf('blog') > -1
-
         let content
 
         if (isAtRootPath) {
@@ -190,13 +189,13 @@ class Template extends React.Component {
                                 : ''
                         }`}
                     >
-                        <div>
-                            {isBlogPage ? (
-                                <BlogLayout
-                                    children={children()}
-                                    blog={this.props.data.allMarkdownRemark}
-                                />
-                            ) : (
+                        {isBlogPage ? (
+                            <BlogLayout
+                                children={children()}
+                                blog={this.props.data.allMarkdownRemark}
+                            />
+                        ) : (
+                            <div>
                                 <div
                                     style={{
                                         maxWidth: '1140px',
@@ -204,8 +203,8 @@ class Template extends React.Component {
                                 >
                                     {children()}
                                 </div>
-                            )}
-                        </div>
+                            </div>
+                        )}
                     </div>
                 </div>
             )
@@ -256,6 +255,7 @@ export const pageQuery = graphql`
                         date(formatString: "MMMM DD, YYYY")
                         path
                         title
+                        author
                     }
                 }
             }
