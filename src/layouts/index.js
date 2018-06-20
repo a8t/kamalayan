@@ -7,6 +7,8 @@ import Main from '../components/Main'
 import Footer from '../components/Footer'
 import Toolbar from '../components/Toolbar'
 
+import BlogLayout from './BlogLayout'
+
 class Template extends React.Component {
     constructor(props) {
         super(props)
@@ -142,6 +144,8 @@ class Template extends React.Component {
 
         const isArticleVisible = !isAtRootPath || this.state.isArticleVisible
 
+        const isBlogPage = location.pathname.split('/').indexOf('blog') > -1
+
         let content
 
         if (isAtRootPath) {
@@ -187,13 +191,20 @@ class Template extends React.Component {
                         }`}
                     >
                         <div>
-                            <div
-                                style={{
-                                    maxWidth: '1140px',
-                                }}
-                            >
-                                {children()}
-                            </div>
+                            {isBlogPage ? (
+                                <BlogLayout
+                                    children={children()}
+                                    blog={this.props.data.allMarkdownRemark}
+                                />
+                            ) : (
+                                <div
+                                    style={{
+                                        maxWidth: '1140px',
+                                    }}
+                                >
+                                    {children()}
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>
@@ -234,6 +245,19 @@ export const pageQuery = graphql`
             siteMetadata {
                 title
                 description
+            }
+        }
+        allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+            edges {
+                node {
+                    id
+                    excerpt(pruneLength: 250)
+                    frontmatter {
+                        date(formatString: "MMMM DD, YYYY")
+                        path
+                        title
+                    }
+                }
             }
         }
     }
