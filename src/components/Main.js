@@ -2,9 +2,20 @@ import React from 'react'
 import Link from 'gatsby-link'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import Lightbox from 'react-images'
 import poster from '../images/poster.jpg'
 
 class Main extends React.Component {
+    state = {
+        isLightboxOpen: false,
+    }
+
+    closeLightbox = () => {
+        this.setState({
+            isLightboxOpen: false,
+        })
+    }
+
     render() {
         let close = (
             <div
