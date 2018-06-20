@@ -2,18 +2,13 @@ import React from 'react'
 import Link from 'gatsby-link'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import Lightbox from 'react-images'
+import Lightbox from 'react-image-lightbox'
+import 'react-image-lightbox/style.css'
 import poster from '../images/poster.jpg'
 
 class Main extends React.Component {
     state = {
         isLightboxOpen: false,
-    }
-
-    closeLightbox = () => {
-        this.setState({
-            isLightboxOpen: false,
-        })
     }
 
     render() {
@@ -46,11 +41,15 @@ class Main extends React.Component {
                     style={{ display: 'none' }}
                 >
                     <h2 className="major">Kamalayan Midya Project 2018</h2>
-                    <Lightbox
-                        images={[{ src: 'https://i.imgur.com/hrfQAZA.jpg' }]}
-                        isOpen={this.state.isLightboxOpen}
-                        onClose={this.closeLightbox}
-                    />
+
+                    {this.state.isLightboxOpen && (
+                        <Lightbox
+                            mainSrc={'https://i.imgur.com/hrfQAZA.jpg'}
+                            onCloseRequest={() => {
+                                this.setState({ isLightboxOpen: false })
+                            }}
+                        />
+                    )}
                     <div
                         className="poster-img--container"
                         onClick={() => this.setState({ isLightboxOpen: true })}
