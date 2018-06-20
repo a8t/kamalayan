@@ -32,13 +32,23 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                 }
 
                 // Create blog posts pages.
-                // _.each(result.data.allMarkdownRemark.edges, edge => {
-                //   createPage({
-                //     path: edge.node.frontmatter.path,
-                //     component: blogPost
-                //   })
-                // })
+                _.each(result.data.allMarkdownRemark.edges, edge => {
+                    createPage({
+                        path: edge.node.frontmatter.path,
+                        component: blogPost,
+                    })
+                })
             })
         )
     })
+}
+
+exports.modifyWebpackConfig = function({ config, env }) {
+    config.merge({
+        resolve: {
+            root: path.resolve(__dirname, './src'),
+            extensions: ['', '.js', '.jsx', '.json'],
+        },
+    })
+    return config
 }
