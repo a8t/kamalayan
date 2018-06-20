@@ -151,7 +151,7 @@ class Links extends React.Component {
 
 export default Links
 
-export const pageQuery = graphql`
+export const linksPageQuery = graphql`
     query LinksQuery {
         site {
             siteMetadata {

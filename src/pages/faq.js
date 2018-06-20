@@ -138,7 +138,7 @@ class FaqPage extends React.Component {
 
 export default FaqPage
 
-export const pageQuery = graphql`
+export const faqQuery = graphql`
     query FaqQuery {
         site {
             siteMetadata {

@@ -69,7 +69,7 @@ class BlogPostTemplate extends React.Component {
 
 export default BlogPostTemplate
 
-export const pageQuery = graphql`
+export const blogPostQuery = graphql`
     query BlogPostByPath($path: String!) {
         site {
             siteMetadata {

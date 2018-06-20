@@ -14,7 +14,7 @@ const BlogPage = ({
 
 export default BlogPage
 
-export const pageQuery = graphql`
+export const blogPageQuery = graphql`
     query IndexQuery {
         allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
             edges {
