@@ -141,8 +141,9 @@ class Main extends React.Component {
                     <p>
                         If you'd like to get in touch, you can fill out the form
                         below, or shoot us an email at{' '}
-                        <a href="mailto:info@kamalayan.ca">info@kamalayan.ca</a>.
-                        You can also find us on Facebook{' '}
+                        <a href="mailto:kmlynkonscious@gmail.com">
+                            kmlynkonscious@gmail.com
+                        </a>. You can also find us on Facebook{' '}
                         <a
                             href="https://www.facebook.com/kamalayankonsciousness/"
                             target="_blank"
@@ -152,7 +153,7 @@ class Main extends React.Component {
                     </p>
                     <form
                         method="POST"
-                        action="https://formspree.io/info@kamalayan.ca"
+                        action="https://formspree.io/kmlynkonscious@gmail.com"
                     >
                         <div className="field half first">
                             <label htmlFor="name">Name</label>
