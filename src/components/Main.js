@@ -7,7 +7,8 @@ if (typeof window !== `undefined`) {
     Lightbox = require('react-image-lightbox').default
 }
 import 'react-image-lightbox/style.css'
-import poster from '../images/poster.jpg'
+import Img from 'gatsby-image'
+import poster from '../images/poster.png'
 
 class Main extends React.Component {
     state = {
@@ -47,19 +48,19 @@ class Main extends React.Component {
 
                     {this.state.isLightboxOpen && (
                         <Lightbox
-                            mainSrc={'https://i.imgur.com/hrfQAZA.jpg'}
+                            mainSrc={poster}
                             onCloseRequest={() => {
                                 this.setState({ isLightboxOpen: false })
                             }}
                         />
                     )}
                     <div
-                        className="poster-img--container"
                         onClick={() => this.setState({ isLightboxOpen: true })}
                     >
-                        <img
+                        <Img
+                            style={{ margin: 'auto' }}
                             className="poster-img--image"
-                            src={poster}
+                            sizes={this.props.posterSizes}
                             alt="KMP Poster"
                         />
                     </div>
