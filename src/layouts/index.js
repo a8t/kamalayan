@@ -2,9 +2,6 @@ import React from 'react'
 import '../assets/scss/main.scss'
 import Helmet from 'react-helmet'
 
-import Header from '../components/Header'
-import Main from '../components/Main'
-import Footer from '../components/Footer'
 import Toolbar from '../components/Toolbar'
 
 class Template extends React.Component {
@@ -145,23 +142,16 @@ class Template extends React.Component {
         let content
 
         if (isAtRootPath) {
-            content = (
-                <div id="wrapper">
-                    <Header
-                        onOpenLink={this.handleOpenLink}
-                        onOpenArticle={this.handleOpenArticle}
-                        timeout={this.state.timeout}
-                    />
-                    <Main
-                        isArticleVisible={isArticleVisible}
-                        timeout={this.state.timeout}
-                        articleTimeout={this.state.articleTimeout}
-                        article={this.state.article}
-                        onCloseArticle={this.handleCloseArticle}
-                        onOpenLink={this.handleOpenLink}
-                    />
-                    <Footer timeout={this.state.timeout} />
-                </div>
+            content = children(
+                Object.assign({}, this.props, {
+                    handleOpenLink: this.handleOpenLink,
+                    handleOpenArticle: this.handleOpenArticle,
+                    handleCloseArticle: this.handleCloseArticle,
+                    timeout: this.state.timeout,
+                    isArticleVisible: isArticleVisible,
+                    articleTimeout: this.state.articleTimeout,
+                    article: this.state.article,
+                })
             )
         } else {
             content = (
