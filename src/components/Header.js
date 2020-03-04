@@ -288,7 +288,6 @@ const Header = props => (
             <div className="inner">
                 <h1 className="title">Kamalayan</h1>
                 <h1 className="subtitle">Konsciousness</h1>
-                <p>A journey into responsible filipino-ness</p>
             </div>
         </div>
         <Nav>
@@ -310,7 +309,7 @@ const Header = props => (
                             props.onOpenArticle('midya')
                         }}
                     >
-                        Midya Project 2018
+                        Kultura at Kamalayan 2020
                     </a>
                 </li>
                 <li>
