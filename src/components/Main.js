@@ -44,8 +44,7 @@ class Main extends React.Component {
                     } ${this.props.articleTimeout ? 'timeout' : ''}`}
                     style={{ display: 'none' }}
                 >
-                    <h2 className="major">Kamalayan Midya Project 2018</h2>
-
+                    <h2 className="major">Kultura at Kamalayan 2020</h2>
                     {this.state.isLightboxOpen && (
                         <Lightbox
                             mainSrc={poster}
@@ -65,45 +64,38 @@ class Main extends React.Component {
                         />
                     </div>
                     <p>
-                        The Kamalayan Youth Midya Project is a media production
-                        program which includes training for radio, and tv
-                        production as well as lessons of Philippine history and
-                        current events in the community.
+                        Kultura at Kamalayan Arts Week is a free program for
+                        Filipino youth aged 13-29 that explores art-making as
+                        well as Philippine history and current events. Learn how
+                        to paint, write songs, create poetry, and much more
+                        while learning about your Filipino roots.
                     </p>
                     <p>
-                        In the past, youth in the Kamalayan collective who
-                        wanted to be involved in media were invited on a drop in
-                        basis. Youth assisted in the studio and attended free
-                        training from the community radio station. This project
-                        idea is the result of our collective’s years of
-                        experience as media volunteers. We hope to broaden the
-                        Filipino youth voice by working with our partners Radyo
-                        Migrante and TV Migrante.
+                        If you’re in high school, it’s also a great opportunity
+                        to earn your volunteer hours!
                     </p>
+                    <p>Lunch and refreshments will be provided.</p>
+                    <p>10am - 3pm</p>
                     <p>
-                        The deadline for applications is June 24, 2018. We look
-                        forward to hearing from you!
+                        Monday, March 16, 2020 - Friday, March 20, 2020 Migrants
                     </p>
+                    <p>Resource Center Canada 2482 Dufferin St, Unit 207</p>
                     <div style={{ marginBottom: '20px' }}>
                         <a
                             className="button"
-                            href="https://goo.gl/forms/4mosbV2stTlZGMXW2"
+                            href="http://bit.ly/kultura-form-2020"
                             target="_blank"
                             ref="noopen"
                         >
-                            Apply now
+                            REGISTER NOW
                         </a>
 
                         <a
                             style={{ marginLeft: '20px' }}
                             className="button"
-                            href="/faq"
-                            onClick={e => {
-                                e.preventDefault()
-                                this.props.onOpenLink('/faq')
-                            }}
+                            href="http://bit.ly/kamalayan-march-break-program-2020"
                         >
-                            Find out more
+                            FIND OUT MORE
                         </a>
                     </div>
                     {close}
@@ -144,13 +136,15 @@ class Main extends React.Component {
                         below, or shoot us an email at{' '}
                         <a href="mailto:kmlynkonscious@gmail.com">
                             kmlynkonscious@gmail.com
-                        </a>. You can also find us on Facebook{' '}
+                        </a>
+                        . You can also find us on Facebook{' '}
                         <a
                             href="https://www.facebook.com/kamalayankonsciousness/"
                             target="_blank"
                         >
                             here
-                        </a>.
+                        </a>
+                        .
                     </p>
                     <form
                         method="POST"
