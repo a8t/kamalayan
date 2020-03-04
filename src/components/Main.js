@@ -63,11 +63,11 @@ class Main extends React.Component {
                             alt="KMP Poster"
                         />
                     </div>
-                    <p>
-                        Kultura at Kamalayan Arts Week is a free program for
-                        Filipino youth aged 13-29 that explores art-making as
-                        well as Philippine history and current events. Learn how
-                        to paint, write songs, create poetry, and much more
+                    <p style={{ paddingTop: 32 }}>
+                        <b>Kultura at Kamalayan Arts Week</b> is a free program
+                        for Filipino youth aged 13-29 that explores art-making
+                        as well as Philippine history and current events. Learn
+                        how to paint, write songs, create poetry, and much more
                         while learning about your Filipino roots.
                     </p>
                     <p>
@@ -75,11 +75,15 @@ class Main extends React.Component {
                         to earn your volunteer hours!
                     </p>
                     <p>Lunch and refreshments will be provided.</p>
-                    <p>10am - 3pm</p>
                     <p>
-                        Monday, March 16, 2020 - Friday, March 20, 2020 Migrants
+                        10am - 3pm
+                        <br />
+                        Monday, March 16, 2020 - Friday, March 20, 2020
+                        <br />
+                        Migrants Resource Center Canada
+                        <br />
+                        2482 Dufferin St, Unit 207
                     </p>
-                    <p>Resource Center Canada 2482 Dufferin St, Unit 207</p>
                     <div style={{ marginBottom: '20px' }}>
                         <a
                             className="button"
