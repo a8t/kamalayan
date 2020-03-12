@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import { palette, size } from '../assets/styleVariables.json'
+import artsweek from '../images/artsweek.png'
 
 const padding = 30
 
@@ -31,19 +32,24 @@ class FaqPage extends React.Component {
                 </Helmet>
                 <h1>Frequently Asked</h1>
                 <div>
-                    <h2>Who is Kamalayan?</h2>
-                    <p>Kamalayan means consciousness.</p>
+                    <h2>WHO IS KAMALAYAN?</h2>
                     <p>
-                        The Kamalayan:Konsciousness Kollective is a kollective
-                        of youth interested in engaging, raising awareness, and
-                        empowering others about the Philippines and the Filipino
-                        community. In the past we have organized workshops and
-                        events on Philippine history, culture, and current
-                        events. We also actively participate with community
-                        partners such as Radyo Migrante, TV Migrante, the
-                        Filipino Canadian Writers and Journalists Network, and
-                        more.
+                        Kamalayan means “awareness” or “consciousness” in
+                        Filipino. We aim to uplift and inform young people so
+                        that they may move forward responsibly, conscious of
+                        their power and their crucial role in creating change.
+                        Kamalayan’s workshops and events take a critical look at
+                        Philippine history, culture, and current events to
+                        encourage, dialogue, awareness and consciousness as a
+                        foundation for youth empowerment.{' '}
                     </p>
+
+                    <p>
+                        We actively participate with community partners such as
+                        Radyo Migrante, TV Migrante, the Filipino Canadian
+                        Writers and Journalists Network, and more.{' '}
+                    </p>
+
                     <p>
                         Our kollective have been volunteer radio hosts and
                         programmers in Toronto-based Radyo Migrante at Vibe
@@ -53,109 +59,66 @@ class FaqPage extends React.Component {
                         sister show of Radyo Migrante. Members of the collective
                         have been featured as cultural workers of these outlets.
                     </p>
-                </div>
-                <div>
-                    <h2>What is the Kamalayan Midya Project?</h2>
+
+                    <h2>WHAT IS THE KULTURA AT KAMALAYAN ART WEEK?</h2>
                     <p>
-                        The Kamalayan Youth Midya Project is a media production
-                        program which includes training for radio, and tv
-                        production as well as lessons of Philippine history. In
-                        the past, youth in the Kamalayan collective who wanted
-                        to be involved in media were invited on a drop in basis.
-                        Youth assisted in the studio and attended free training
-                        from the community radio station. This project idea is
-                        the result of our collective’s years of experience as
-                        media volunteers. We hope to broaden the Filipino youth
-                        voice by working with our partners Radyo Migrante and TV
-                        Migrante.
+                        Kultura at Kamalayan Arts Week is a free program for
+                        Filipino youth aged 13-29 that explores art-making as
+                        well as Philippine history and current events. Learn how
+                        to paint, write songs, create poetry, and much more
+                        while learning about your Filipino roots.
                     </p>
                 </div>
                 <div>
-                    <h2>What will participants learn?</h2>
+                    <h2>WHAT WILL PARTICIPANTS LEARN?</h2>
                     <p>
-                        In this project participants will have weekly workshops
-                        on:
-                        <ul>
-                            <li>Newswriting</li>
-                            <li>Scriptwriting</li>
-                            <li>Radio and TV hosting</li>
-                            <li>Concept development</li>
-                        </ul>
-                        At Kamalayan we ground our work with the realities and
-                        history of the Filipino community in Toronto, Canada as
-                        well as the motherland, the Philippines. Discussions on
-                        history and current events are an integral part of this
-                        project.
+                        In this project participants will have daily workshops
+                        during the week of March Break (March 16 - 20, 2020) on
+                        the following topics:
                     </p>
+                    <img src={artsweek} style={{ width: '100%' }} />
                     <p>
-                        Participants will have a final group project of helping
-                        produce a radio or tv episode with our media partners.
+                        At Kamalayan, we ground our work with the realities and
+                        history of the Filipino community in Canada as well as
+                        the motherland, the Philippines. Discussions on history
+                        and current events are an integral part of this project.
                     </p>
                 </div>
                 <div>
-                    <h2>Who can participate?</h2>
+                    <h2>WHO CAN PARTICIPATE?</h2>
                     <p>
-                        Youth of Filipino descent between the ages of 16-29 can
-                        participate. No professional media experience is
-                        required. An interest in learning and working as a group
-                        will help!
+                        Filipino youth between the ages of 13-29 can
+                        participate. Priority will be given to high school
+                        youth. No previous experience with art required—an
+                        interest in learning and working as a group will help!
                     </p>
                 </div>
                 <div>
-                    <h2>Wait, do I have to speak Filipino?</h2>
+                    <h2>WILL THE WORKSHOPS BE IN TAGALOG OR ENGLISH?</h2>
                     <p>
-                        Not necessarily, the workshops will be given in English
-                        and our media partners are Filipino-English programming.
+                        The workshops will be given primarily in English. We
+                        will happily accommodate participants who are more
+                        comfortable with the Tagalog language!
                     </p>
                 </div>
                 <div>
-                    <h2>How many participants will be included?</h2>
+                    <h2>HOW MANY PARTICIPANTS WILL BE INCLUDED?</h2>
                     <p>We're looking into accepting about 6-10 applicants.</p>
                 </div>
                 <div>
-                    <h2>Is there a cost?</h2>
+                    <h2>IS THERE A COST?</h2>
                     <p>
-                        The programs is free for participants. TTC tokens will
-                        also be provided, and food will be available during the
-                        sessions.
+                        The program is free for participants. Lunch and
+                        refreshments will be available during the sessions.
                     </p>
                 </div>
                 <div>
-                    <h2>What will I get by doing this?</h2>
+                    <h2>HOW DO I GET INVOLVED?</h2>
                     <p>
-                        Skills and experience! You will meet a lot of great
-                        interesting people along the way and with the training
-                        and final project you will get a certificate of
-                        completion ...and who knows what other opportunities
-                        will come your way!
-                    </p>
-                    <p>
-                        Kamalayan members also will host complementary study
-                        sessions on Philippine history, the history of Filipinos
-                        in Canada, and other issues being faced by the
-                        community. These study sessions are meant teach but also
-                        provide inspiration for the youth participants for their
-                        final project. Moreover, youth participants will be able
-                        to cultivate their relationship with themselves, their
-                        local communities, external communities and beyond. The
-                        participants would be able to contribute to the work of
-                        TV and Radyo Migrante’s vision as engaged community
-                        media outlets, making this a mutually beneficial
-                        partnership.
+                        Glad you asked! You can find the application{' '}
+                        <a href="http://bit.ly/kultura-form-2020">here</a>.
                     </p>
                 </div>
-                <h2>How do I get involved?</h2>
-                <p>
-                    Glad you asked! You can find the application{' '}
-                    <a
-                        href="https://goo.gl/forms/4mosbV2stTlZGMXW2"
-                        target="_blank"
-                        ref="noopen"
-                    >
-                        here.
-                    </a>{' '}
-                    The deadline is June 24, 2018.
-                </p>
             </FaqContainer>
         )
     }
