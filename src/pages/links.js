@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import { palette, size } from '../assets/styleVariables.json'
@@ -113,8 +112,8 @@ class Links extends React.Component {
     render() {
         const siteTitle = this.props.data.site.siteMetadata.title
         const siteDescription = this.props.data.site.siteMetadata.description
-        const renderList = linksData.map(eachOrg => {
-            const links = eachOrg.urls.map(eachUrl => {
+        const renderList = linksData.map((eachOrg) => {
+            const links = eachOrg.urls.map((eachUrl) => {
                 return (
                     <ListItemLink
                         href={eachUrl.url}

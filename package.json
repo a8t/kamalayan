@@ -4,11 +4,7 @@
     "version": "1.0.0",
     "author": "Andy Tran",
     "dependencies": {
-        "gatsby": "^1.9.235",
-        "gatsby-image": "^1.0.42",
-        "gatsby-link": "^1.6.39",
-        "gatsby-plugin-favicon": "^2.1.1",
-        "gatsby-plugin-google-analytics": "^1.0.24",
+        "gatsby": "^3.5.1",
         "gatsby-plugin-react-helmet": "^1.0.8",
         "gatsby-plugin-sass": "^1.0.23",
         "gatsby-plugin-sharp": "^1.6.41",
@@ -18,9 +14,7 @@
         "gatsby-transformer-remark": "^1.7.37",
         "gatsby-transformer-sharp": "^1.6.22",
         "lodash": "^4.17.4",
-        "null-loader": "^0.1.1",
         "react-image-lightbox": "^5.0.0",
-        "react-images": "^0.5.14",
         "styled-components": "^3.3.2"
     },
     "homepage": "https://github.com/ChangoMan/gatsby-starter-dimension",
@@ -41,8 +35,5 @@
         "build": "gatsby build",
         "deploy": "gatsby build --prefix-paths && gh-pages -d public",
         "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
-    },
-    "devDependencies": {
-        "gh-pages": "^1.2.0"
     }
 }

@@ -1,13 +1,10 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
 let Lightbox
 if (typeof window !== `undefined`) {
     Lightbox = require('react-image-lightbox').default
 }
 import 'react-image-lightbox/style.css'
-import Img from 'gatsby-image'
 import poster from '../images/poster.png'
 
 class Main extends React.Component {
@@ -55,14 +52,7 @@ class Main extends React.Component {
                     )}
                     <div
                         onClick={() => this.setState({ isLightboxOpen: true })}
-                    >
-                        <Img
-                            style={{ margin: 'auto' }}
-                            className="poster-img--image"
-                            sizes={this.props.posterSizes}
-                            alt="KMP Poster"
-                        />
-                    </div>
+                    ></div>
                     <p style={{ paddingTop: 32 }}>
                         <b>Kultura at Kamalayan Arts Week</b> is a free program
                         for Filipino youth aged 13-29 that explores art-making
