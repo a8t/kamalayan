@@ -56,6 +56,22 @@ class Main extends React.Component {
                         foundation for youth empowerment.
                     </p>
                     <p>We are based in Toronto, Canada.</p>
+
+                    <p>
+                        We actively participate with community partners such as
+                        Radyo Migrante, TV Migrante, the Filipino Canadian
+                        Writers and Journalists Network, and more.
+                    </p>
+
+                    <p>
+                        Our kollective have been volunteer radio hosts and
+                        programmers in Toronto-based Radyo Migrante at Vibe
+                        105.5 FM. Radyo Migrante is a 10-year old, multi-
+                        awarded Filipino-English radio talk show housed at York
+                        University. In 2017, TV Migrante was launched as a
+                        sister show of Radyo Migrante. Members of the collective
+                        have been featured as cultural workers of these outlets.
+                    </p>
                     {close}
                 </article>
 

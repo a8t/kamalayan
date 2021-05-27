@@ -306,10 +306,10 @@ const Header = (props) => (
                     <a
                         href="javascript:;"
                         onClick={() => {
-                            props.onOpenLink('/faq')
+                            props.onOpenLink('/programs')
                         }}
                     >
-                        FAQ
+                        Programs
                     </a>
                 </li>
                 <li>
