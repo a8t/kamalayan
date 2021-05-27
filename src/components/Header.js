@@ -45,7 +45,7 @@ const HeaderContainer = styled.header`
             display: block;
             position: absolute;
             top: calc(-3.5rem - 1px);
-            left: calc(50% - ${size.borderWidth} * 1);
+            left: calc(50%);
             width: ${size.borderWidth};
             height: calc(3.5rem + 1px);
             background: ${palette.border};
