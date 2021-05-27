@@ -12,7 +12,7 @@ import {
 import ka from '../images/ka.svg'
 
 const HeaderContainer = styled.header`
-    display: ${props => (props.timeout ? 'none' : 'flex')};
+    display: ${(props) => (props.timeout ? 'none' : 'flex')};
     flex-direction: column;
     align-items: center;
     transition: transform ${duration.article} ease-in-out,
@@ -279,7 +279,7 @@ const Nav = styled.nav`
         }
     }
 `
-const Header = props => (
+const Header = (props) => (
     <HeaderContainer timeout={props.timeout}>
         <div className="logo">
             <img src={ka} alt="" />
@@ -300,16 +300,6 @@ const Header = props => (
                         }}
                     >
                         About
-                    </a>
-                </li>
-                <li>
-                    <a
-                        href="javascript:;"
-                        onClick={() => {
-                            props.onOpenArticle('midya')
-                        }}
-                    >
-                        Kultura at Kamalayan 2020
                     </a>
                 </li>
                 <li>

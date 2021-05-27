@@ -59,65 +59,6 @@ class FaqPage extends React.Component {
                         sister show of Radyo Migrante. Members of the collective
                         have been featured as cultural workers of these outlets.
                     </p>
-
-                    <h2>WHAT IS THE KULTURA AT KAMALAYAN ART WEEK?</h2>
-                    <p>
-                        Kultura at Kamalayan Arts Week is a free program for
-                        Filipino youth aged 13-29 that explores art-making as
-                        well as Philippine history and current events. Learn how
-                        to paint, write songs, create poetry, and much more
-                        while learning about your Filipino roots.
-                    </p>
-                </div>
-                <div>
-                    <h2>WHAT WILL PARTICIPANTS LEARN?</h2>
-                    <p>
-                        In this project participants will have daily workshops
-                        during the week of March Break (March 16 - 20, 2020) on
-                        the following topics:
-                    </p>
-                    <img src={artsweek} style={{ width: '100%' }} />
-                    <p>
-                        At Kamalayan, we ground our work with the realities and
-                        history of the Filipino community in Canada as well as
-                        the motherland, the Philippines. Discussions on history
-                        and current events are an integral part of this project.
-                    </p>
-                </div>
-                <div>
-                    <h2>WHO CAN PARTICIPATE?</h2>
-                    <p>
-                        Filipino youth between the ages of 13-29 can
-                        participate. Priority will be given to high school
-                        youth. No previous experience with art required—an
-                        interest in learning and working as a group will help!
-                    </p>
-                </div>
-                <div>
-                    <h2>WILL THE WORKSHOPS BE IN TAGALOG OR ENGLISH?</h2>
-                    <p>
-                        The workshops will be given primarily in English. We
-                        will happily accommodate participants who are more
-                        comfortable with the Tagalog language!
-                    </p>
-                </div>
-                <div>
-                    <h2>HOW MANY PARTICIPANTS WILL BE INCLUDED?</h2>
-                    <p>We're looking into accepting about 6-10 applicants.</p>
-                </div>
-                <div>
-                    <h2>IS THERE A COST?</h2>
-                    <p>
-                        The program is free for participants. Lunch and
-                        refreshments will be available during the sessions.
-                    </p>
-                </div>
-                <div>
-                    <h2>HOW DO I GET INVOLVED?</h2>
-                    <p>
-                        Glad you asked! You can find the application{' '}
-                        <a href="http://bit.ly/kultura-form-2020">here</a>.
-                    </p>
                 </div>
             </FaqContainer>
         )
