@@ -44,7 +44,7 @@ class ProgramsPage extends React.Component {
                         <h3>Who Can Join the Program? </h3>
                         <p>
                             Any Filipino/a/x youth aged 13-29 years old who live
-                            in the Greater Toronto Area.
+                            in Toronto may join.
                             <br />
                             Having previous experience in podcasting is not
                             required but an interest in sharing and learning
