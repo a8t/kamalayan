@@ -28,7 +28,7 @@
     "palette": {
         "bg": "#1b1f22",
         "bgAlt": "#000000",
-        "bgOverlay": "rgba(19, 21, 25, 0.5)",
+        "bgOverlay": "rgba(19, 21, 25, 0.7)",
         "fg": "#ffffff",
         "fgBold": "#ffffff",
         "fgLight": "rgba(255, 255, 255, 0.5)",

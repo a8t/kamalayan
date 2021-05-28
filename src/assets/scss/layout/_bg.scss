@@ -50,8 +50,9 @@
                 'filter #{2 * _duration(article)} ease-in-out'
             )
         );
-        background-image: black;
-        background-position: right;
+        @include vendor('filter', 'blur(0rem) brightness(0.5)');
+        background-image: url('../../images/bg3.jpg');
+        background-position: 50% 50%;
         background-size: cover;
         background-repeat: no-repeat;
         z-index: 1;
@@ -59,7 +60,7 @@
     .body.is-article-visible & {
         &:after {
             @include vendor('transform', 'scale(1.0825)');
-            @include vendor('filter', 'blur(0.2rem)');
+            @include vendor('filter', 'blur(0.2rem) brightness(0.4)');
         }
     }
     .body.is-loading & {
