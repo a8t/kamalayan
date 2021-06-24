@@ -74,7 +74,7 @@ class ProgramsPage extends React.Component {
                             Register here.
                         </a>
                     </h3>
-                    <p>The registration deadline is Wednesday, June 9, 2021.</p>
+                    <p>The registration deadline for cohort 2 is Wednesday, July 21, 2021.</p>
                     <h3>
                         Questions? Contact {''}
                         <a href="mailto:info@kamalayan.ca">info@kamalayan.ca</a>
