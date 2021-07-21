@@ -97,7 +97,7 @@ class ProgramsPage extends React.Component {
 export default ProgramsPage
 
 export const pageQuery = graphql`
-    query ProgramsQuery {
+    query TalambuhayQuery {
         site {
             siteMetadata {
                 title
